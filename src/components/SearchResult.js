@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from '../App.module.css';
 
 function SearchResult({data}) {
@@ -16,6 +16,10 @@ function SearchResult({data}) {
       <hr className={style.hr}/>
       </>)
     })
+  } else if (data === "Loading") {
+    result = (<li className={style.song}> 
+      <h1>Loading...</h1>
+    </li>)
   }
 
   return (

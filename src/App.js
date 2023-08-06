@@ -9,6 +9,7 @@ function App() {
   const [resultData, setResultData] = useState([]);
 
   const getSongs = async (input) => {
+    setResultData("Loading");
     if (input == "") {
       return alert("Please type something to search");
     }
