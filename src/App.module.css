@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 15% auto;
+    margin: 15% auto 5% auto;
 }
   
   #searchInput {
@@ -85,6 +85,43 @@
   width: 100%;
   border: rgb(158, 158, 158) 1px solid ;
 }
+.Tophr {
+  width: 100%;
+  border: rgb(95, 95, 95) 1px solid ;
+}
 .details {
-  color: rgb(180, 180, 180);
+  color: rgb(103, 97, 97);
+}
+.top {
+  margin: 0;
+  display: flex;
+  align-items:end;
+}
+.playlistText {
+  width: 70%;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  outline: none;
+}
+.playlistButton {
+  width: 28%;
+  font-size: 1rem;
+  height: 3rem;
+  border-radius: 40px;
+  background-color:rgb(26, 14, 59);
+  color: white;
+  border-style: none;
+  padding: auto 16px;
+}
+.note {
+  margin: 0 auto 10% auto;
+  font-size: 1.5rem;
+  color: rgba(245, 245, 245, 0.654);
+  background-color: #0f0a1ea1;
+  border-radius: 40px;
+  width: fit-content;
+  padding: 10px;
+  font-weight: bold;
 }

@@ -2,15 +2,36 @@ import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import SearchResult from './components/SearchResult';
 import style from './App.module.css';
-import $ from 'jquery';
+import Playlist from './components/Playlist';
+import axios from 'axios';
 
 function App() {
   const [songInput, setSongInput] = useState('');
   const [resultData, setResultData] = useState([]);
+  const [playlistName, setPlaylistName] = useState('');
+  const [token, setToken] = useState();
+
+  const spotify = {clientId: '6f33d7b58bd7448b904d9ab930223f11', clientSecret: '3269bf006df14f569c83f7ab5ccd20d2'};
+
+  useEffect(() => {    
+    axios("https://accounts.spotify.com/api/token", {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+        'Authorization': 'Basic ' + btoa(spotify.clientId + ":" + spotify.clientSecret)
+      },
+      data: 'grant_type=client_credentials',
+      method: 'POST'
+    })
+    .then(tokenResponse => {
+      console.log(tokenResponse.data.access_token);
+      setToken(tokenResponse.data.access_token); 
+    })
+  }, []);
+  
 
   const getSongs = async (input) => {
     setResultData("Loading");
-    if (input == "") {
+    if (input === "") {
       return alert("Please type something to search");
     }
     let url = 'https://spotify23.p.rapidapi.com/search/?q=' + input + '&type=tracks&offset=0&limit=10&numberOfTopResults=5';
@@ -33,11 +54,17 @@ function App() {
     }
   }
 
+  const createPlaylist = async () => {
+    
+  }
+
   return (
     <div>
       <Header songInput={songInput} setChange={setSongInput} clickFunc={getSongs} />
+      
       <div className={style.boxContainer}>
         <SearchResult data={resultData}/>
+        <Playlist playlistName={playlistName} setPlaylistName={setPlaylistName} />
       </div>
     </div>
   );

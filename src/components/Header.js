@@ -11,7 +11,7 @@ function Header({songInput, setChange, clickFunc}) {
     }
 
   return (
-    <div className={style.App}>
+    <div>
       <header className={style.searchSection}>
         <h1 className={style.title}>Jamming</h1>
       </header>
@@ -22,6 +22,7 @@ function Header({songInput, setChange, clickFunc}) {
       </svg>
     </button>
     </div>
+    <p className={style.note}>Note: Please create playlist before adding songs</p>
     </div>
   )
 }
