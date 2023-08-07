@@ -1,20 +1,22 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import style from '../App.module.css';
 
-function SearchResult({data}) {
+function SearchResult({data, addSong}) {
   let result;
   if (Array.isArray(data) && data !== []) {
+    let count = 0;
     result = data.map((songItem) => {
-      return (<>
-      <li className={style.song} key={songItem.data.id}>
+      count++;
+      return (<div key={songItem.data.name + count.toString()}>
+      <li className={style.song} >
           <div>
             <h4>{songItem.data.name}</h4>
             <p className={style.details}>{songItem.data.artists.items[0].profile.name} | {songItem.data.albumOfTrack.name}</p>
           </div>
-          <button className={style.plus}>+</button>
+          <button className={style.plus} onClick={() => addSong(prev => [...prev, songItem.data])}>+</button>
       </li>
       <hr className={style.hr}/>
-      </>)
+      </div>)
     })
   } else if (data === "Loading") {
     result = (<li className={style.song}> 

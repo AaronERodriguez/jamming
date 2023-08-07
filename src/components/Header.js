@@ -1,7 +1,7 @@
 import React from 'react'
 import style from '../App.module.css';
 
-function Header({songInput, setChange, clickFunc}) {
+function Header({songInput, setChange, clickFunc, loginLink}) {
 
     const handleChange = ({target}) => {
         setChange(target.value)
@@ -22,6 +22,11 @@ function Header({songInput, setChange, clickFunc}) {
       </svg>
     </button>
     </div>
+    <div className={style.buttonContainer}>
+      <a href={loginLink} className={style.center}>
+        <button className={style.loginButton}>Sign in with Spotify!</button>
+      </a>
+      </div>
     <p className={style.note}>Note: Please create playlist before adding songs</p>
     </div>
   )

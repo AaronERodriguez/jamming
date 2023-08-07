@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 15% auto 5% auto;
+    margin: 5% auto 5% auto;
 }
   
   #searchInput {
@@ -41,7 +41,7 @@
 .container {
   background-color: #0f0a1ea1;
   width: 40vw;
-  height: 73rem;
+  height: fit-content;
   color: white;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -123,5 +123,44 @@
   border-radius: 40px;
   width: fit-content;
   padding: 10px;
+  font-weight: bold;
+}
+.loginButton {
+  margin: 5% 0;
+  font-size: 1.5em;
+  background-color: #1DB954;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 40px;
+  border-style: none;
+  cursor: pointer;
+  transition: font-size 0.1s ease-in, background-color 0.1s ease-in, font-weight 0.1s ease-in;
+}
+.loginButton:hover {
+  font-size: 1.7em;
+  background-color: #02a739;
+  font-weight: bold;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 5% 0 5% 0;
+}
+.addSongButton {
+  margin: 5% 0;
+  font-size: 1.5em;
+  background-color: rgb(26, 14, 59);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 40px;
+  border-style: none;
+  cursor: pointer;
+  transition: font-size 0.1s ease-in, background-color 0.1s ease-in, font-weight 0.1s ease-in;
+}
+.addSongButton:hover {
+  font-size: 1.7em;
+  background-color: rgb(36, 19, 83);
   font-weight: bold;
 }
