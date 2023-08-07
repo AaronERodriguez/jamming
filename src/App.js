@@ -36,7 +36,7 @@ function App() {
 
         return initial;
       }, {})
-      //window.location.hash = ""
+      window.location.hash = ""
     }
     console.log(info);
     let accessToken = info.access_token;
@@ -90,6 +90,7 @@ function App() {
       }).then(playlist => {
         console.log(playlist.id);
         setPlaylistId(playlist.id);
+        alert('Playlist created: ' + playlist.name);
       })
     } else {
       alert("Please enter a name for the playlist before creating one")
@@ -104,6 +105,7 @@ function App() {
     spotify.addTracksToPlaylist(playlistId, uris)
     .then(snapshot => {
       console.log(snapshot);
+      alert("Songs Added to the playlist!");
     })
   }
 

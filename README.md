@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Jamming [![Website shields.io](https://img.shields.io/website-up-down-green-red/http/shields.io.svg)](https://aaronerodriguez.github.io/jamming/) [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com) [![Npm package version](https://badgen.net/npm/v/express)](https://npmjs.com/package/express)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+ ## **Table of content:**
+ - [Purpose](#item-one)
+ - [Technologies](#item-two)
+ - [Features](#item-three)
+ 
+ <!-- headings -->
+ <a id="item-one"></a>
+## Purpose
+The purpose of this website is to easily create a playlist in your spotify account without having to open the Spotify app.
+ 
+ <a id="item-two"></a>
+ ## Technologies
+The following technologies were used for this project:
+- HTML
+- CSS
+- Javascript
+- React
+- Fetch API
+- NPM
+- Spotify API
 
-## Available Scripts
+ <a id="item-three"></a>
+ ## Features
+ ### *Search:* 
+ ![image](./public/Screenshot%202023-08-06%20at%2021.51.53.png)
+ Type any track name or artists into this input field. This field search the Spotify API for the results for your search and display in on the results section below.
 
-In the project directory, you can run:
+ ---
 
-### `npm start`
+ ### Sign In:
+ ![image](./public/Screenshot%202023-08-06%20at%2021.55.02.png)
+ This button will fetch for the Spotify API and will ask the user for authentication to edit playlists. You need to accept the authentication in order to be able to create playlist and add songs to it.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+ ### Important note:
+ ![image](./public/Screenshot%202023-08-06%20at%2022.35.12.png)
+ This notes is important. It is necessary to create a new playlist to add songs to it in this website. You need to create a playlist in order to get it's id.
 
-### `npm test`
+ ---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ ### Results:
+ ![image](./public/Screenshot%202023-08-06%20at%2022.36.46.png)
+ This container contains the information about the search result. It will display the results of your search. It will display the name in white, and at the bottom the artist and album will be written next to eachother.
+ 
+ You can add the song to the playlist that is currently being used by pressing the plus sign next to every song.
 
-### `npm run build`
+ ### Playlist
+ ![image](./public/Screenshot%202023-08-06%20at%2023.40.53.png) 
+ In this container you will be able to create a playlist and add songs to it. To do this, first you need to add the playlist name located next to the Create Playlist button. 
+ 
+ Once you have put the name of the playlist, you can click create playlist and you will then be able to add songs using the previous playlist feature.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ If you find it necessary you can always remove a song that you added by pressing the "-" button next to every song.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ Once you are ready to add the songs, you can click the Add Songs button and it will added to the respective playlist.
