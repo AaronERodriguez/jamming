@@ -17,7 +17,7 @@ function App() {
   const spotify = new SpotifyWebApi();
   const spotifyInfo = {clientId: '6f33d7b58bd7448b904d9ab930223f11', clientSecret: '3269bf006df14f569c83f7ab5ccd20d2'};
   const authEndpoint = "https://accounts.spotify.com/authorize";
-  const redirectUri = "http://localhost:3000/callback"
+  const redirectUri = "https://aaronerodriguez.github.io/jamming/"
   const scopes = [
     "playlist-modify-private",
     "playlist-modify-public"
