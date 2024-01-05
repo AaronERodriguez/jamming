@@ -100,10 +100,12 @@
 .playlistText {
   width: 70%;
   font-size: 2rem;
-  background-color: transparent;
+  background-color: #0f0a1ea1;
   border: none;
   color: white;
   outline: none;
+  border-radius: 5px;
+  margin-right: 5px;
 }
 .playlistButton {
   width: 28%;

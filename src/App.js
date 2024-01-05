@@ -8,7 +8,7 @@ import SpotifyWebApi from 'spotify-web-api-js';
 function App() {
   const [songInput, setSongInput] = useState('');
   const [resultData, setResultData] = useState([]);
-  const [playlistName, setPlaylistName] = useState('');
+  const [playlistName, setPlaylistName] = useState('Type Name');
   const [user, setUser] = useState({});
   const [token, setToken] = useState('');
   const [playlistId, setPlaylistId] = useState('');
@@ -57,10 +57,10 @@ function App() {
   }, [addedSongs])
 
   const getSongs = async (input) => {
-    setResultData("Loading");
     if (input === "") {
       return alert("Please type something to search");
     }
+    setResultData("Loading");
     let url = 'https://spotify23.p.rapidapi.com/search/?q=' + input + '&type=tracks&offset=0&limit=10&numberOfTopResults=5';
     let options = {
       method: 'GET',
